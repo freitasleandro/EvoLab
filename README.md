@@ -1,4 +1,4 @@
-# EvoLab 2.1 — Simulações evolutivas
+# EvoLab 3.0 — Simulações evolutivas
 
 Universidade Federal da Bahia · Campus de Vitória da Conquista · Instituto Multidisciplinar em Saúde · Curso de Ciências Biológicas.
 
@@ -60,3 +60,13 @@ A abertura identifica o Grupo Genética e Bioinformática, o IMS/UFBA, o Campus 
 ## Seleção natural e mutação
 
 O sétimo modelo aplica seleção de viabilidade seguida de mutação bidirecional no pool gênico e acasalamento aleatório. A população é infinita, sem deriva ou migração. O gráfico mostra A e a no combinado e uma referência de A com seleção sem mutação, também exportável em CSV. μ = ν = 0 recupera seleção isolada; s = 0 recupera mutação isolada. Aptidão média zero interrompe o cálculo, pois a mutação atua após a seleção.
+
+## Autômato celular espacial
+
+Selecione Representação → Autômato celular espacial. Há sete cenários com indivíduos AA (azul), Aa (roxo), aa (laranja) e posições vazias brancas. A animação tem reprodução/pausa, setas, seletor de geração e velocidade; pode ser baixada como HTML offline. O histórico CSV usa contagens reais e frequências entre indivíduos presentes; NPZ salva todas as grades.
+
+Controles: lado 8–60, gerações 1–500, ocupação, padrão inicial, semente, Moore/Von Neumann, raio 1–3, borda periódica/fechada e colonização. Toda versão espacial tem amostragem finita e estrutura local. Deriva e seleção + deriva acrescentam um gargalo B de reprodutores locais. B não é Ne. A documentação explica as regras e as diferenças para os modelos originais.
+
+Novos arquivos obrigatórios para o deploy: spatial_backend.py e spatial_ui.py. Envie também frontend.py e apresentacao.py atualizados, mantendo backend.py, requirements.txt e demais arquivos na mesma pasta. O arquivo principal do Streamlit continua frontend.py. Não basta enviar o ZIP ao GitHub: extraia e atualize os arquivos. O manual atualizado pode ser baixado no aplicativo.
+
+Execute todos os testes com `python -m unittest discover -v`. A suíte inclui modelos originais, regras espaciais, invariantes e controles das duas representações.

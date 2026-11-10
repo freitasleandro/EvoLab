@@ -12,6 +12,8 @@ O aplicativo permite simular, em uma população diploide com dois alelos, os ef
 
 **Objetivo:** oferecer uma ferramenta interativa para compreender os mecanismos de mudança genética nas populações, comparar cenários evolutivos e interpretar resultados de simulações reprodutíveis com base em modelos de genética de populações.
 
+**Representações disponíveis:** Frequências populacionais reúne os modelos matemáticos originais. Autômato celular espacial permite observar indivíduos AA, Aa e aa em uma grade, com posições vazias em branco, reprodução local e animação ao longo das gerações. A versão espacial é estocástica e tem regras próprias, apresentadas antes dos resultados.
+
 **Como começar:** selecione um modelo na barra lateral, leia a orientação abaixo, ajuste as frequências iniciais e os parâmetros e clique em **Executar simulação**. Ao modificar a frequência de um alelo, a do outro é ajustada para que a soma seja 1. As frequências variam de 0 a 1; por exemplo, 0,5 corresponde a 50%. A geração 0 representa a condição inicial. As simulações são didáticas e devem ser interpretadas de acordo com as hipóteses de cada modelo.
 '''
 
