@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 from backend import simular, MODELOS, TEXTOS, ESTOCASTICOS
 from apresentacao import APRESENTACAO, ORIENTACOES
 
-st.set_page_config(page_title='EvoLab · Genética de populações',page_icon='🧬',layout='wide')
+st.set_page_config(page_title='EvoLab · Genética de populações',page_icon='',layout='wide')
 st.markdown('''<style>
 .stApp {background:#f5f7fb} [data-testid="stSidebar"]{background:#fff;border-right:1px solid #e1e7ef}
 h1,h2,h3{color:#17334b} .eyebrow{color:#13877d;font-weight:700;letter-spacing:2px;font-size:12px}
@@ -21,7 +21,7 @@ if st.sidebar.radio('Representação', ['Frequências populacionais', 'Autômato
 
 if 'historico' not in st.session_state: st.session_state.historico={}
 with st.sidebar:
-    st.markdown('### 🧬 EvoLab')
+    st.markdown('###  EvoLab')
     st.caption('UFBA · Campus de Vitória da Conquista')
     st.caption('Curso de Ciências Biológicas · IMS')
     modelo=st.selectbox('Processo evolutivo',MODELOS)
